@@ -18,10 +18,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore -r win10-x86
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Create the package
-      run: dotnet pack --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore -r win10-x86
     - name: Test
-      run: dotnet test --configuration Release --no-restore --no-build --verbosity normal
+      run: dotnet test --configuration Release --no-restore --no-build --verbosity normal -r win10-x86
