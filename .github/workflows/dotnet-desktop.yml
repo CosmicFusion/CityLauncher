@@ -21,3 +21,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet publish -c Release -o publish -p:PublishReadyToRun=true -p:PublishSingleFile=true --self-contained true -p:IncludeNativeLibrariesForSelfExtract=true
+    - name: dir 1
+      run: dir D:\a\CityLauncher\CityLauncher\bin\Release\net6.0-windows\win-x64\
+    - name: dir 2
+      run: dir  D:\a\CityLauncher\CityLauncher\publish\
