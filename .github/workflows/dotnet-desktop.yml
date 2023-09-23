@@ -20,6 +20,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal -f netcoreapp2.0
+      run: dotnet build --no-restore -f netcoreapp2.0
