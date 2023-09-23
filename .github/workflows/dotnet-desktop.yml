@@ -25,3 +25,8 @@ jobs:
       run: dir D:\a\CityLauncher\CityLauncher\bin\Release\net6.0-windows\win-x64\
     - name: dir 2
       run: dir  D:\a\CityLauncher\CityLauncher\publish\
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: EXE App
+        path: D:\a\CityLauncher\CityLauncher\publish\CityLauncher.exe
