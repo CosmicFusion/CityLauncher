@@ -18,6 +18,6 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore -r win10-x64 --self-contained
+      run: dotnet restore -c Release -r win10-x64 -f netcoreapp2.0  --self-contained true
     - name: Build
-      run: dotnet publish -c Release -r win10-x64 --self-contained
+      run: dotnet publish -c Release -r win10-x64 -f netcoreapp2.0 --self-contained true
